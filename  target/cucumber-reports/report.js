@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("createRecord.feature");
 formatter.feature({
   "line": 2,
   "name": "Create Record",
@@ -11,6 +11,10 @@ formatter.feature({
       "name": "@test"
     }
   ]
+});
+formatter.before({
+  "duration": 4309807400,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 4,
@@ -45,39 +49,91 @@ formatter.step({
   "name": "clicks on Click Save and Close button",
   "keyword": "And "
 });
+formatter.step({
+  "line": 11,
+  "name": "user creates another record using different date and description",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "user navigates to the first record",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 13,
+  "name": "delete the record",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "validate the first record doesn\u0027t exist anymore before logging out",
+  "keyword": "Then "
+});
 formatter.match({
-  "location": "MyStepdefs.userLoginToTheApplicationUsingTheCredentials()"
+  "location": "createRecordSteps.userLoginToTheApplicationUsingTheCredentials()"
 });
 formatter.result({
-  "duration": 8397864500,
+  "duration": 6045884500,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepdefs.navigateToTheModule()"
+  "location": "createRecordSteps.navigateToTheModule()"
 });
 formatter.result({
-  "duration": 133292400,
+  "duration": 207874600,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepdefs.hoverOverEnvironmentAndSelectReleaseToWater()"
+  "location": "createRecordSteps.hoverOverEnvironmentAndSelectReleaseToWater()"
 });
 formatter.result({
-  "duration": 1565610800,
+  "duration": 2311781700,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepdefs.userClicksOnNewRecordButtonAndEnterSampleDateAndDescriptionFields()"
+  "location": "createRecordSteps.userClicksOnNewRecordButtonAndEnterSampleDateAndDescriptionFields()"
 });
 formatter.result({
-  "duration": 5430156600,
+  "duration": 3814667000,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepdefs.clicksOnClickSaveAndCloseButton()"
+  "location": "createRecordSteps.clicksOnClickSaveAndCloseButton()"
 });
 formatter.result({
-  "duration": 1362888000,
+  "duration": 4890821600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "createRecordSteps.userCreatsAnotherRecordUsingDifferentDateAndDescription()"
+});
+formatter.result({
+  "duration": 11404952700,
+  "status": "passed"
+});
+formatter.match({
+  "location": "createRecordSteps.userNavigatesToSettingsForTheFirstRecord()"
+});
+formatter.result({
+  "duration": 2124756400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "createRecordSteps.clicksOnDelete()"
+});
+formatter.result({
+  "duration": 3715564400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "createRecordSteps.theRecordGetsDeleted()"
+});
+formatter.result({
+  "duration": 985994400,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 58100,
   "status": "passed"
 });
 });
