@@ -96,7 +96,6 @@ public class createRecordSteps {
             String idStr = path.substring(path.lastIndexOf('t') + 2);
             String firstRecordWith0 = idStr;
             firstRecord = firstRecordWith0.substring(0, firstRecordWith0.length() - 2);
-            System.out.println("====> " + firstRecord);
 
         }
 
@@ -104,8 +103,8 @@ public class createRecordSteps {
         public void clicksOnDelete() throws InterruptedException {
             driver.findElement(By.id("manageRecord" + firstRecord )).click();
             driver.findElement(By.id("cogDelete" + firstRecord)).click();
-            Thread.sleep(2000);
-            driver.findElement(By.xpath("//*[@id=\"full_width\"]/div[11]/div[3]/div/button[1]")).click();
+            Thread.sleep(3000);
+            driver.findElement(By.cssSelector("#full_width > div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable > div.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix > div > button:nth-child(1)")).click();
 
 
         }
@@ -115,8 +114,6 @@ public class createRecordSteps {
             driver.findElement(By.xpath("//*[@id=\"uservoice-activation\"]/a/div/div")).click();
             driver.findElement(By.xpath("//*[@id=\"uservoice-activation\"]/ul/li[4]/a")).click();
             Assert.assertEquals("Logout",driver.findElement(By.xpath("//*[@id=\"ng-app\"]/body/div/div/div[2]/div/div[1]/h3")).getText());
-
-
         }
 
 
